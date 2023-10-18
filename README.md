@@ -1,2 +1,2 @@
-# eos
+# EOS
 EOS - Enclave Operating System
