@@ -8,7 +8,7 @@ EOS uses [Buildroot](https://buildroot.org/)'s [_External Tree_ mechanism](https
 git clone git@github.com:ultravioletrs/eos.git
 git clone git@github.com:buildroot/buildroot.git
 cd buildroot
-make BR2_EXTERNAL=../eos eos_defconfig
+make BR2_EXTERNAL_EOS_PATH=../eos eos_defconfig
 make menuconfig
 make
 ```
