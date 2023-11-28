@@ -5,8 +5,7 @@
 ################################################################################
 
 AGENT_VERSION = main
-AGENT_SITE = https://github.com/ultravioletrs/cocos.git
-AGENT_SITE_METHOD = git
+AGENT_SITE = $(call github,ultravioletrs,cocos,$(AGENT_VERSION))
 
 define AGENT_BUILD_CMDS 	
 	$(MAKE) -C $(@D) agent
@@ -16,4 +15,4 @@ define AGENT_INSTALL_TARGET_CMDS
 	cp $(@D)/build/cocos-agent $(TARGET_DIR)/bin
 endef
 
-$(eval $(generic-package))
+$(eval $(golang-package))
